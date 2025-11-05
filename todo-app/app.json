@@ -34,7 +34,9 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "router": {},
+      "router": {
+        "origin": "deep-link"
+      },
       "eas": {
         "projectId": "c89514f4-f00a-4160-bab4-a2f35f909299"
       }
