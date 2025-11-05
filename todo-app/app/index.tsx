@@ -15,7 +15,7 @@ const Screen = styled.View`
   background-color: ${({theme}: any)=>theme.colors.bg};
   align-items: center;
 `;
-const Container = styled.View`
+const Container = styled.ScrollView`
   width: 100%;
   max-width: 540px;
   flex: 1;
@@ -48,10 +48,10 @@ const Title = styled.Text`
   letter-spacing: 8px;
 `;
 const Content = styled.View` 
-  flex: 1;
   padding: 20px; 
   gap: 16px; 
   margin-top: -40px;
+  padding-bottom: 40px;
 `;
 const Row = styled.View` flex-direction: row; gap: 10px; align-items: center;`;
 const Input = styled.TextInput`
@@ -205,7 +205,7 @@ export default function Index(){
         {todos === undefined ? (
           <ActivityIndicator />
         ) : data.length === 0 ? (
-          <Empty><EmptyTxt>No todos yet. Tap "+ New".</EmptyTxt></Empty>
+          <Empty><EmptyTxt>No todos found. Total: {todos?.length || 0}</EmptyTxt></Empty>
         ) : (
           <DraggableFlatList
             data={data}
@@ -213,8 +213,8 @@ export default function Index(){
             onDragEnd={({ data: newData }) => reorder({ ids: newData.map((t:any)=>t._id) })}
             renderItem={renderItem}
             ItemSeparatorComponent={() => <Sep/>}
-            contentContainerStyle={{ paddingBottom: 20, flexGrow: 1 }}
-            style={{ flex: 1 }}
+            scrollEnabled={false}
+            style={{ minHeight: data.length * 100 }}
           />
         )}
 
