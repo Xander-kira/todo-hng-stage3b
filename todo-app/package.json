@@ -30,8 +30,7 @@
     "react-native-web": "^0.21.0",
     "react-native-worklets": "0.5.1",
     "react-native-worklets-core": "^1.6.2",
-    "styled-components": "^6.1.19",
-    "undefined": "\\"
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
