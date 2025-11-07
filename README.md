@@ -261,6 +261,12 @@ Accessibility: buttons/inputs have accessibilityLabel; colors meet contrast targ
 // convex/schema.ts
 todos: { title, description?, dueDate?, completed, order, createdAt }
 
+10) ## APK Download
+https://expo.dev/accounts/xanderkira/projects/todo-app/builds/f4c9b9bf-fcfa-4685-a5b8-f82755c2c3e3
+
+## Backend (Convex)
+EXPO_PUBLIC_CONVEX_URL=https://fastidious-parakeet-585.convex.cloud/
+
 
 Queries & mutations in convex/todos.ts:
 
